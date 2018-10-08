@@ -30,7 +30,7 @@ class ClientReceiver implements Runnable {
 		while (in != null) {
 			try {
 				// 서버로 부터 전송되는 데이터를 출력
-				System.out.println(in.readUTF());
+				logger.info(in.readUTF());
 			} catch (IOException e) {
 				logger.error("서버와의 연결이 끊어졌습니다. 다시 연결을 시도합니다.", e);
 				try {
